@@ -28,3 +28,10 @@ def get_db():
         yield db.start()
     finally:
         db.close()
+
+@app.post("/save/")
+def save_data(user: User):
+    with get_db() as db:
+        # Simulate saving data to the database
+        print(f"Saving user: {user}")
+        return {"status": "Data saved successfully!"}
