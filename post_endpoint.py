@@ -12,6 +12,10 @@ class Message(BaseModel):
     content: str
     user: User
 
+@app.get("/home")
+def get_data():
+    return {"message": "hello"}
+
 @app.post("/users/", response_model=Message)
 def create_user(user: User):
     return {"content": f"User Created Successfully", "user": user}
