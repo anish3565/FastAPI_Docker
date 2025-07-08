@@ -13,4 +13,4 @@ def save_in_db(db, data):
         print("Error saving data: {e}")
 
 def demo_save_in_db(data):
-    return "Data Saved successfully!"
+    return {"status":"Data Saved successfully!"}
